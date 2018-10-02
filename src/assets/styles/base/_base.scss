@@ -1,0 +1,17 @@
+@import './reset';
+@import './reuse';
+@import './spaces';
+@import './font';
+
+body {
+  font-size: 14px;
+}
+
+html, body, .app, #root, main {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --color-primary: #333333;
+}

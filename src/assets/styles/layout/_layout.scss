@@ -1,0 +1,10 @@
+@import './grid';
+@import './media';
+
+.container {
+  margin: 0 auto;
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+}
