@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './app';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Style Files
+import 'normalize.css'; // https://github.com/necolas/normalize.css
+import 'animate.css'; // https://daneden.github.io/animate.css/
+import './assets/styles/app.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
+// Redux
+import { Provider } from 'react-redux';
+import { history, store } from './store';
+import { ConnectedRouter } from 'react-router-redux';
+
+ReactDOM.render(
+  <Provider store={ store }>
+    <ConnectedRouter history={ history }>
+      <App/>
+    </ConnectedRouter>
+  </Provider>
+,document.getElementById('root'));
+
 serviceWorker.unregister();
