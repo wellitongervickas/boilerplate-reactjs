@@ -1,8 +1,7 @@
 import React from 'react';
 import { Route, Switch, withRouter } from "react-router-dom";
-
-import { convertToArray } from '../../../model/helpers/list';
 import config from '../../../config';
+import { convertToArray } from '../../../model/helpers/list';
 
 const routesList = convertToArray(config.routesApp);
 
