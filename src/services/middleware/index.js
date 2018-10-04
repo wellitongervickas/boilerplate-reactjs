@@ -1,23 +1,19 @@
 import Axios from 'axios';
 
-const middleware = (() => {
+/**
+ * @function request
+ *
+ * @public
+ *
+*/
 
-  /**
-   * @function request
-   *
-   * @public
-   *
-  */
+const requestMiddleware = () => {
 
-  const request = () => {
+  const request = Axios.create();
+  return request;
+}
 
-    const request = Axios.create();
-    return request;
-  }
+export default {
+  requestMiddleware
+}
 
-  return {
-    request,
-  }
-})();
-
-export default middleware;
