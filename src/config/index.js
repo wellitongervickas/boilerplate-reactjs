@@ -4,12 +4,12 @@ import locales from './locales';
 import { routesApp, routesList } from './routes';
 
 // Set Locale
-const { ptBr } = locales;
+const { en } = locales;
 
 export default {
   app,
   api,
   routesList,
   routesApp,
-  lang: ptBr,
+  lang: en,
 };
